@@ -75,3 +75,86 @@ nav ul li a:hover:after{
 .header-text h1 span{
     color: darkcyan;
 }
+
+#about{
+    padding: 80px 0;
+    color: #ababad;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 50px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 150px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.info{
+    margin: 70px 0;
+    font-size: 70px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 70px 0 40px;
+}
+
+.tab-links{
+    margin-right: 300px;
+    font-size: 70px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    contain: '';
+    width: 0;
+    height: 3px;
+    background: darkcyan;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    list-style: none;
+    margin: 10px ; 
+    font-size: 50px;
+}
+
+.tab-contents ul li span{
+    color: darkcyan;
+    font-size: 60px;
+    
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}

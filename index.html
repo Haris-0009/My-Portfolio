@@ -28,9 +28,66 @@
     <div id="about">
         <div class="container">
             <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <div class="info">
+                        <p>Tailwind CSS is a design system implementation in pure CSS. It is also configurable. It gives developers super powers. It allows them to build
+                        websites with a clean consistent UI out of the box .</p>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interest')">Interest</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills"> 
+                        <ul>
+                            <li><span>UI/UX</span><br><br>Desiging  and Prototyping  User Interfaces</li><br>                          
+                            <li><span>Frontend Development</span><br><br>Web Interface development</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Graduation</span><br><br>On Going from Muhammad Ali Jinnah Univeristy</li><br>                          
+                            <li><span>Intermediate</span><br><br>Govt. Superior Science College</li><br>
+                            <li><span>Matriculation</span><br><br>the Educator School</li>
                 
+                        </ul>
             </div>
+                    <br>
+                    <div class="tab-contents" id="interest">
+                       <p>
+                        Passionate about leveraging artiﬁcial intelligence to enhance web applications. 
+                        Enthusiastically exploring how AI can improve user experience, optimize backend processes, 
+                        and provide innovative solutions in web
+                        development actively following the latest trends and
+                        advancements in AI and machine learning to incorporate
+                        cutting-edge technologies into web projects. Committed
+                        to continuous learning and staying updated with the
+                        intersection of AI and web technologies to drive
+                        innovation and eﬃciency. 
+                       </p>
+                    </div>
+                </div>
+                
         </div>
     </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+        }
+    </script>
 </body>
 </html>
