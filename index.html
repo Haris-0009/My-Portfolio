@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haris</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://kit.fontawesome.com/b2a18608ff.js" crossorigin="anonymous"></script></head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <img src="logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Frontend Developer</p>
@@ -25,6 +27,7 @@
             </div>
         </div>
     </div>
+    <!-- About -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -38,9 +41,9 @@
                         websites with a clean consistent UI out of the box .</p>
                     </div>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('interest')">Interest</p>
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event, 'interest')">Interest</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills"> 
                         <ul>
@@ -53,10 +56,10 @@
                         <ul>
                             <li><span>Graduation</span><br><br>On Going from Muhammad Ali Jinnah Univeristy</li><br>                          
                             <li><span>Intermediate</span><br><br>Govt. Superior Science College</li><br>
-                            <li><span>Matriculation</span><br><br>the Educator School</li>
+                            <li><span>Matriculation</span><br><br>The Educator School</li>
                 
                         </ul>
-            </div>
+                    </div>
                     <br>
                     <div class="tab-contents" id="interest">
                        <p>
@@ -75,19 +78,139 @@
                 
         </div>
     </div>
+</div>
+<!-- Services -->
+ <div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+             <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>User Interface Development</h2><br>
+                <p>UI development is the process of programming client-
+                    facing interfaces . Like UI design, the UI development
+                     process includes writing code for 
+                    images, animations, sliders, text fields, buttons, etc.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Designing and Prototyping Website</h2><br>
+                <p>Prototyping plays a very crucial role in UI/UX design. 
+                    It is a process of interface design that helps to determine
+                     the functionality and usability of the product before its 
+                     final launch . Prototypes can vary in fidelity, 
+                    and in reality, and can begin at any stage.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
     </div>
+ </div>
+ <!-- Portfolio -->
+  <div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.PNG">
+                <div class="layer">
+                    <h3>Blogger Website</h3>
+                    <p>It overviews the profiles and blogs fetched from Google Blogger API.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work2.PNG">
+                <div class="layer">
+                    <h3>Embroidery Website</h3>
+                    <p>It visualizes the overview content and scenario of the website 
+                        with the help of unique use cases.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work3.PNG">
+                <div class="layer">
+                    <h3>Landing Page</h3>
+                    <p>It's a simple landing page for the Interior design website and it was developed on HTML-CSS.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work4.png">
+                <div class="layer">
+                    <h3>Vocational Skilled Worker Platform</h3>
+                    <p>It's providing the platform for finding 
+                        trade jobs for vocationally skilled workers such as painters, plumbers, carpenters, and so on. </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- contact -->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> kunwarharis2004@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 03331321400</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></i></a>
+                </div>
+                    <a href="resume.pdf" class="btn btn2" >Download resume</a>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                </form>
+                <button type="submit" class="btn btn2">Submit</button>
+            </div>
+        </div>
+       
+    </div>
+    <div class="copyright">
+        <p>Copyright  ©  Haris.</p>
+    </div>
+   </div>
     <script>
-        var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
+         var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classlist.remove("active-link");
+        function opentab(event, tabname) {
+            console.log("Tab clicked:", tabname);
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+                console.log("Removing active-link from:", tablink);
             }
-            for(tabcontent of tabcontents){
-                tabcontent.classlist.remove("active-tab");
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+                console.log("Removing active-tab from:", tabcontent);
             }
+            event.currentTarget.classList.add("active-link");
+            console.log("Adding active-link to:", event.currentTarget);
+            document.getElementById(tabname).classList.add("active-tab");
+            console.log("Adding active-tab to:", document.getElementById(tabname));
         }
+    </script>
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemen.style.right = "0px";
+        }
+
+        
+        function closemenu(){
+            sidemen.style.right = "-200px";
+        }
+
     </script>
 </body>
 </html>
