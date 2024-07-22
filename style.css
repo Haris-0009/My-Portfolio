@@ -359,6 +359,13 @@ form .btn2{
     cursor: pointer;
 }
 
+.contact-right span{
+    color: #61b752;
+    margin-top: 40px;
+    font-size: 50px;
+    display: block;
+}
+
 .copyright{
     width: 5525px;
     font-size: 50px;
@@ -597,6 +604,10 @@ nav .fas{
 
     }
 
+    .contact-right span{
+        font-size: 14px;
+    }
+
     .copyright{
         font-size: 14px;
         width: 400px;
@@ -604,5 +615,5 @@ nav .fas{
         line-height: 5px;
         text-align: center;
     }
-
 }
+

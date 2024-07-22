@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haris</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/b2a18608ff.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/b2a18608ff.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="logo.png" class="logo">
+                <img src="logo.png" class="logo" href="#header">
                 <ul id="sidemenu">
                     <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
                     <li><a href="#header">Home</a></li>
@@ -116,7 +117,7 @@
                 <div class="layer">
                     <h3>Blogger Website</h3>
                     <p>It overviews the profiles and blogs fetched from Google Blogger API.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://i-techstudio.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -133,7 +134,7 @@
                 <div class="layer">
                     <h3>Landing Page</h3>
                     <p>It's a simple landing page for the Interior design website and it was developed on HTML-CSS.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://haris-0009.github.io/landing-Page/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -165,12 +166,13 @@
                     <a href="resume.pdf" class="btn btn2" >Download resume</a>
             </div>
             <div class="contact-right">
-                <form >
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
-                <button type="submit" class="btn btn2">Submit</button>
+                <span id="msg"></span>
             </div>
         </div>
        
@@ -212,5 +214,23 @@
         }
 
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz9RROvmtuLfwe9uPljLDqHxk8sPxWur1EZiSKww2y7oxSiWztFhTTEZu3Zhz2xRoMh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
